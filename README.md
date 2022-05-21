@@ -18,7 +18,7 @@ sudo apt install cmake debhelper extra-cmake-modules libicu-dev libcrypt-dev lib
 ## Build
 
 ```shell
-git clone https://github.com/cirily/settings/
+git clone https://github.com/cirily/settings.git
 cd settings
 mkdir build
 cd build
