@@ -1,6 +1,6 @@
 # Settings
 
-The System Settings application for Cutefish Desktop.
+The System Settings application for Cirily Desktop.
 
 ![screenshot](screenshots/Screenshot_20211025_150819.png)
 
@@ -18,6 +18,8 @@ sudo apt install cmake debhelper extra-cmake-modules libicu-dev libcrypt-dev lib
 ## Build
 
 ```shell
+git clone https://github.com/cirily/settings/
+cd settings
 mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
