@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2022 Pisces system  Team.
  *
- * Author:     Reion Wong <reionwong@gmail.com>
+ * Author:     Lanka Yan  <young3030@163.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
