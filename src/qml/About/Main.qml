@@ -1,7 +1,9 @@
 /*
  * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2022 Pisces System
  *
  * Author:     revenmartin <revenmartin@gmail.com>
+ * Author:     Tsukuyomi Toki <huangzimocp@126.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -46,7 +48,7 @@ ItemPage {
             Image {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 width: 140
-                height: 72
+                height: 140
                 sourceSize: Qt.size(width, height)
                 source: "qrc:/images/logo.svg"
             }
@@ -57,7 +59,7 @@ ItemPage {
 
             Label {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                text: "<b>Cutefish</b>"
+                text: "<b>Pisces System</b>"
                 visible: !about.isCutefishOS
                 font.pointSize: 22
                 color: "#3385FF"
