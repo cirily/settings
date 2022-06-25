@@ -1,6 +1,6 @@
 # Settings
 
-The System Settings application for Cirily Desktop.
+The System Settings application for Pisces Desktop.
 
 ![screenshot](screenshots/Screenshot_20211025_150819.png)
 
