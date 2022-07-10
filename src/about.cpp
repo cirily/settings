@@ -8,7 +8,7 @@
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * fork from Cutefish.
+ * fork from Pisces.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -81,18 +81,18 @@ About::About(QObject *parent)
 {
 }
 
-bool About::isCutefishOS()
+bool About::isPiscesys()
 {
-    if (!QFile::exists("/etc/cutefishos"))
+    if (!QFile::exists("/etc/piscesys"))
         return false;
 
-    QSettings settings("/etc/cutefishos", QSettings::IniFormat);
-    return settings.value("CutefishOS", false).toBool();
+    QSettings settings("/etc/piscesys", QSettings::IniFormat);
+    return settings.value("Piscesys", false).toBool();
 }
 
 QString About::version()
 {
-    QSettings settings("/etc/cutefish", QSettings::IniFormat);
+    QSettings settings("/etc/pisces", QSettings::IniFormat);
     return settings.value("Version").toString();
 }
 
@@ -183,7 +183,7 @@ QString About::cpuInfo()
 
 void About::openUpdator()
 {
-    QProcess::startDetached("cutefish-updator", QStringList());
+    QProcess::startDetached("pisces-updator", QStringList());
 }
 
 qlonglong About::calculateTotalRam() const

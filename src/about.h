@@ -8,7 +8,7 @@
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * fork from Cutefish.
+ * fork from Pisces.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -30,7 +30,7 @@
 class About : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool isCutefishOS READ isCutefishOS CONSTANT)
+    Q_PROPERTY(bool isPiscesys READ isPiscesys CONSTANT)
     Q_PROPERTY(QString version READ version CONSTANT)
     Q_PROPERTY(QString osName READ osName CONSTANT)
     Q_PROPERTY(QString architecture READ architecture CONSTANT)
@@ -45,7 +45,7 @@ class About : public QObject
 public:
     explicit About(QObject *parent = nullptr);
 
-    bool isCutefishOS();
+    bool isPiscesys();
 
     QString version();
 

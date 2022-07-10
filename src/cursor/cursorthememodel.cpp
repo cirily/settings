@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -32,7 +32,7 @@
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_settings("cutefishos", "theme")
+    , m_settings("piscesys", "theme")
 {
     initThemes();
 
@@ -98,9 +98,9 @@ void CursorThemeModel::setCurrentTheme(const QString &theme)
         m_currentTheme = theme;
         emit currentThemeChanged();
 
-        QDBusInterface interface("com.cutefish.Settings",
+        QDBusInterface interface("com.pisces.Settings",
                                  "/Theme",
-                                 "com.cutefish.Theme",
+                                 "com.pisces.Theme",
                                  QDBusConnection::sessionBus());
         if (interface.isValid())
             interface.asyncCall("setCursorTheme", m_currentTheme);

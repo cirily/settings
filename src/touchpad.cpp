@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
- * Author:     Reion Wong <reion@cutefishos.com>
+ * Author:     Reion Wong <reion@piscesys.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,9 +21,9 @@
 
 Touchpad::Touchpad(QObject *parent)
     : QObject(parent)
-    , m_iface("com.cutefish.Settings",
+    , m_iface("com.pisces.Settings",
               "/Touchpad",
-              "com.cutefish.Touchpad",
+              "com.pisces.Touchpad",
               QDBusConnection::sessionBus(), this)
 {
 

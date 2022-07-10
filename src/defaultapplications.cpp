@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 - 2022 CutefishOS Team.
+ * Copyright (C) 2021 - 2022 Piscesys Team.
  *
- * Author:     Kate Leet <kate@cutefishos.com>
+ * Author:     Kate Leet <kate@piscesys.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -79,7 +79,7 @@ void DefaultApplications::loadApps()
     QSettings mimeApps(mimeAppsListFilePath(), QSettings::IniFormat);
     mimeApps.beginGroup("Default Applications");
 
-    QSettings settings("cutefishos", "defaultApps");
+    QSettings settings("piscesys", "defaultApps");
 
     QString defaultBrowser = mimeApps.value("x-scheme-handler/http").toString();
     QString defaultFM = mimeApps.value("inode/directory").toString();
@@ -236,7 +236,7 @@ void DefaultApplications::setDefaultTerminal(int index)
 
     qDebug() << index << desktop;
 
-    QSettings settings("cutefishos", "defaultApps");
+    QSettings settings("piscesys", "defaultApps");
     settings.setValue("terminal", desktop);
 }
 

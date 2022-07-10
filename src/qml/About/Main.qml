@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  * Copyright (C) 2022 Pisces System
  *
  * Author:     revenmartin <revenmartin@gmail.com>
@@ -23,7 +23,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import FishUI 1.0 as FishUI
-import Cutefish.Settings 1.0
+import Pisces.Settings 1.0
 import "../"
 
 ItemPage {
@@ -57,29 +57,29 @@ ItemPage {
                 height: FishUI.Units.smallSpacing
             }
 
-            Label {
+            /*Label {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 text: "<b>Pisces System</b>"
-                visible: !about.isCutefishOS
+                visible: !about.isPiscesys
                 font.pointSize: 22
                 color: "#3385FF"
                 leftPadding: FishUI.Units.largeSpacing * 2
                 rightPadding: FishUI.Units.largeSpacing * 2
-            }
+            }*/
 
             Image {
-                Layout.preferredWidth: 167
-                Layout.preferredHeight: 26
-                sourceSize: Qt.size(500, 76)
-                source: "qrc:/images/logo.png"
+                Layout.preferredWidth: 255
+                Layout.preferredHeight: 38
+                sourceSize: Qt.size(510, 76)
+                source: "qrc:/images/text-logo.svg"
                 Layout.alignment: Qt.AlignHCenter
-                visible: about.isCutefishOS
+//                 visible: about.isPiscesys
                 asynchronous: true
             }
 
             Label {
                 text: qsTr("Built on %1").arg(about.prettyProductName)
-                visible: !about.isCutefishOS
+                visible: !about.isPiscesys
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 color: FishUI.Theme.disabledTextColor
             }
@@ -126,7 +126,7 @@ ItemPage {
 
             StandardButton {
                 Layout.fillWidth: true
-                visible: about.isCutefishOS
+                visible: about.isPiscesys
                 text: qsTr("Software Update")
                 onClicked: {
                     about.openUpdator()

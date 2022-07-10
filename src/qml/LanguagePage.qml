@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
 import FishUI 1.0 as FishUI
-import Cutefish.Settings 1.0 as Settings
+import Pisces.Settings 1.0 as Settings
 
 ItemPage {
     headerTitle: qsTr("Language")

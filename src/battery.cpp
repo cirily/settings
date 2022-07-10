@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 Piscesys Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -24,9 +24,9 @@
 #include <QDBusReply>
 #include <QDebug>
 
-static const QString s_sServer = "com.cutefish.Settings";
+static const QString s_sServer = "com.pisces.Settings";
 static const QString s_sPath = "/PrimaryBattery";
-static const QString s_sInterface = "com.cutefish.PrimaryBattery";
+static const QString s_sInterface = "com.pisces.PrimaryBattery";
 
 //DBus Battery Info Structure
 struct BatteryInfo {
@@ -55,9 +55,9 @@ Battery::Battery(QObject *parent)
                         "/org/freedesktop/UPower",
                         "org.freedesktop.UPower",
                         QDBusConnection::systemBus())
-    , m_interface("com.cutefish.Settings",
+    , m_interface("com.pisces.Settings",
                   "/PrimaryBattery",
-                  "com.cutefish.PrimaryBattery",
+                  "com.pisces.PrimaryBattery",
                   QDBusConnection::sessionBus())
     , m_available(false)
     , m_onBattery(false)
@@ -170,13 +170,13 @@ QString Battery::lastChargedTime() const
 
 bool Battery::showPercent()
 {
-    QSettings settings(QSettings::UserScope, "cutefishos", "statusbar");
+    QSettings settings(QSettings::UserScope, "piscesys", "statusbar");
     return settings.value("BatteryPercentage", false).toBool();
 }
 
 void Battery::setPercentEnabled(bool value)
 {
-    QDBusInterface("com.cutefish.Statusbar", "/Statusbar").call("setBatteryPercentage", value);
+    QDBusInterface("com.pisces.Statusbar", "/Statusbar").call("setBatteryPercentage", value);
 }
 
 QString Battery::udi() const
